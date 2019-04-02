@@ -42,11 +42,13 @@ const initialState = {
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case USERS_RECEIVED:
+      console.log("Reducer User Received");
       return {
         ...state,
         users: action.payload
       };
     case REQUEST_USERS:
+      console.log("Reducer Request Users");
       return {
         ...state,
         isFetching: true
