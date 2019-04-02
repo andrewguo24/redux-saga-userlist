@@ -31,7 +31,7 @@ import {
   USERS_RECEIVED,
   REQUEST_USERS,
   REQUEST_USERS_FAILED
-} from "../constants/index";
+} from "../constants";
 
 const initialState = {
   users: [],

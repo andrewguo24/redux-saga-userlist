@@ -26,7 +26,7 @@ class UserList extends React.Component {
 
 // read state data from store and pass it to the container as props
 const mapStateToProps = state => {
-  console.log("Users", state.users);
+  console.log("Container User List", state.users);
   return {
     users: state.users.users
   };
