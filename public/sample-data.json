@@ -2,10 +2,10 @@
   "users": [
     {
       "id": "1",
-      "first": "Bucky",
+      "first": "David",
       "last": "Roberts",
       "age": 29,
-      "description": "Bucky is a React developer and YouTuber",
+      "description": "David is a React developer and YouTuber",
       "thumbnail": "http://i.imgur.com/7yUvePI.jpg"
     },
     {

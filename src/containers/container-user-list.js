@@ -1,7 +1,6 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-// import { selectUser } from "../actions/index";
 import * as actionCreators from "../actions";
 
 class UserList extends React.Component {
@@ -10,12 +9,15 @@ class UserList extends React.Component {
   }
 
   render() {
-    const { users, selectUser } = this.props;
+    const { users, dispatch } = this.props;
     return (
       <ul>
         {users &&
           users.map(user => (
-            <li key={user.id} onClick={() => selectUser(user)}>
+            <li
+              key={user.id}
+              onClick={() => dispatch(actionCreators.selectUser(user))}
+            >
               {user.first} {user.last}
             </li>
           ))}
@@ -25,19 +27,10 @@ class UserList extends React.Component {
 }
 
 // read state data from store and pass it to the container as props
-const mapStateToProps = state => {
-  console.log("Container User List", state.users);
-  return {
-    users: state.users.users
-  };
-};
+const mapStateToProps = ({ users }) => users;
 
 // hook an action creator to an user event
-// const mapDispatchToProps = dispatch => {
-//   return bindActionCreators({ selectUser, actionCreators }, dispatch);
-// };
-
-const matchDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => ({
   ...bindActionCreators(actionCreators),
   dispatch
 });
@@ -45,5 +38,5 @@ const matchDispatchToProps = dispatch => ({
 // connect the props and actions to the container class UserList
 export default connect(
   mapStateToProps, //connect the props which get from mapStateToProps
-  matchDispatchToProps //connect the action which get from mapDispatchToProps
+  mapDispatchToProps //connect the action which get from mapDispatchToProps
 )(UserList);

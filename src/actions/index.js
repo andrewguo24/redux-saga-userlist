@@ -18,30 +18,15 @@ export const selectUser = user => ({
   payload: user
 });
 
-// export const requestUsers = () => ({
-//   type: REQUEST_USERS
-// });
-
-export const requestUsers = () => {
-  console.log("Action requestUsers");
-  return {
-    type: REQUEST_USERS
-  };
-};
+export const requestUsers = () => ({
+  type: REQUEST_USERS
+});
 
 export const requestUsersFailed = () => ({
   type: REQUEST_USERS_FAILED
 });
 
-// export const receiveUsers = json => ({
-//   type: USERS_RECEIVED,
-//   payload: json.users
-// });
-
-export const receiveUsers = json => {
-  console.log("Action receiveUsers", json.users);
-  return {
-    type: USERS_RECEIVED,
-    payload: json.users
-  };
-};
+export const receiveUsers = json => ({
+  type: USERS_RECEIVED,
+  payload: json.users
+});

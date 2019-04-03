@@ -4,9 +4,3 @@ import watchRequestUsers from "./users";
 export default function* rootSaga() {
   yield all([fork(watchRequestUsers)]);
 }
-
-// import watchRequestUsers from "./users";
-
-// export default function* rootSaga() {
-//   yield [watchRequestUsers()];
-// }
