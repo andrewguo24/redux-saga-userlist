@@ -2,26 +2,26 @@
   "users": [
     {
       "id": "1",
-      "first": "David",
+      "first": "Harry",
       "last": "Roberts",
       "age": 29,
-      "description": "David is a React developer and YouTuber",
+      "description": "David is a developer",
       "thumbnail": "http://i.imgur.com/7yUvePI.jpg"
     },
     {
       "id": "2",
-      "first": "Joby",
+      "first": "Nancy",
       "last": "Wasilenko",
       "age": 27,
-      "description": "Joby loves the Packers, cheese, and turtles.",
+      "description": "Nancy loves the Packers, cheese, and turtles.",
       "thumbnail": "http://i.imgur.com/52xRlm8.png"
     },
     {
       "id": "3",
-      "first": "Madison",
+      "first": "Jackson",
       "last": "Williams",
       "age": 24,
-      "description": "Madi likes her dog but it is really annoying.",
+      "description": "Jackson likes her cat but it is really annoying.",
       "thumbnail": "http://i.imgur.com/4EMtxHB.png"
     }
   ]
